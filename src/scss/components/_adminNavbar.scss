@@ -1,0 +1,18 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.admin-navbar {
+    width: 100%;
+    
+    @include m.tablet {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .btn {
+        @include m.btn(v.$blue, v.$white);
+        font-size: 1.5rem;
+    }
+}

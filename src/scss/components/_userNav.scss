@@ -1,0 +1,18 @@
+@use 'base/variables' as v;
+
+.user-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+
+    .logout-link {
+        font-size: 1.8rem;
+        color: v.$blue;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

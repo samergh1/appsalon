@@ -1,0 +1,61 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.tab {
+    width: 100%;
+    
+    button {
+        display: block;
+        width: 100%;
+        background-color: v.$blue;
+        padding: 1rem;
+        color: v.$white;
+        text-transform: uppercase;
+        font-weight: v.$bold;
+        border: none;
+        margin-bottom: 1rem;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        
+        &:hover {
+            cursor: pointer;
+            background-color: darken(v.$blue, 10%);
+        }
+        
+        &.active {
+            background-color: v.$white;
+            color: v.$blue;
+        }
+    }
+    
+    @include m.tablet {
+        display: flex;
+
+        button {
+            border-right: 1px solid darken(v.$blue, 10%);
+            margin: 0;
+        
+            &:last-of-type {
+            border: none;
+            }
+        }
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+
+    .btn {
+        @include m.btn(v.$blue, v.$white);
+
+        &.btn-hide {
+            visibility: hidden;
+        }
+    }
+}

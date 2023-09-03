@@ -1,0 +1,24 @@
+@use 'base/variables' as v;
+
+.alert {
+    display: block;
+    text-align: center;
+    font-weight: v.$bold;
+    font-size: 1.8rem;
+    margin: 2.5rem 0;
+    
+    &.error {
+        color: v.$red;
+    }
+
+    &.success {
+        color: v.$green;
+    }
+}
+
+.input-error {
+    display: inline-block;
+    color: v.$red;
+    font-size: 1.4rem;
+    margin-top: 0.8rem;
+}

@@ -1,0 +1,1 @@
+function runApp(){filterByDate()}function filterByDate(){document.querySelector("#date").addEventListener("input",(function(t){const n=t.target.value;window.location="?date="+n}))}document.addEventListener("DOMContentLoaded",(function(){runApp()}));

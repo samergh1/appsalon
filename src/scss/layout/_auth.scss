@@ -1,0 +1,45 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.auth-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0;
+
+    .name-inputs {
+        @include m.grid(1, 1rem);
+
+        @include m.tablet {
+            @include m.grid(2, 1rem);
+        }
+    }
+
+    .forgot-password {
+        text-align: right;
+        margin-top: 0.9rem;
+
+        a {
+            color: v.$gray;
+            font-size: 1.4rem;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    .auth-helper {
+        text-align: center;
+    
+        a {
+            font-size: 1.8rem;
+            color: v.$blue;
+    
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

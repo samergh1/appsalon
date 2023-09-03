@@ -1,0 +1,19 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.appointment {
+    width: 100%;
+    border-top: 1px solid v.$gray;
+    margin: 3rem 0;
+    padding: 1rem 0;
+
+    span {
+        color: v.$blue;
+        font-weight: v.$bold;
+    }
+
+    .btn-delete {
+        margin: 0 auto;
+        @include m.btn(v.$red, v.$white);
+    }
+}

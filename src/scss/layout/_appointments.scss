@@ -1,0 +1,71 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.appointments-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1.5rem 0;
+
+    .section-title {
+        margin: 6rem 0;
+        font-size: 5rem;
+    }
+}
+
+.appointment-step {
+    display: none;
+
+    &.show {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 5rem 0;
+    }
+}
+
+.services-summary {
+    width: 100%;
+    margin-bottom: 3rem;
+
+    h2 {
+        margin-bottom: 5rem;
+    }
+
+    span {
+        color: v.$blue;
+        font-size: 2.2rem;
+        font-weight: v.$bold;
+    }
+
+    .service-summary {
+        width: 100%;
+        border-bottom: 1px solid v.$gray;
+    }
+
+    .total-services {
+        font-size: 2.5rem;
+    }
+}
+
+.appointment-summary {
+    width: 100%;
+
+    h2 {
+        margin-bottom: 5rem;
+    }
+
+    span {
+        color: v.$blue;
+        font-size: 2.2rem;
+        font-weight: v.$bold; 
+    }
+
+    .send-btn {
+        @include m.btn(v.$blue, v.$white);
+        margin: 0 auto;
+    }
+}
